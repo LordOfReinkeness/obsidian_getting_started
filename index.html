@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>Obsidian für die Dokumentation</h1>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Markdown?</h1>
+					</section>
+
+					<section>
+						<h3>Text formatierung</h3>
+						<img src="./graphics/formatting.png" width="1200px">
+					</section>
+
+					<section>
+						<h3>Kapitelstruktur</h3>
+
+						<pre width="70%"><code class="text" data-trim><script type="text/template">
+							# Eine Kapitelüberschrift
+							## Ein Sub-kapitel
+							### Noch ein Level tiefer
+						</script></code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Listen</h3>
+
+						<pre width="70%"><code class="bash" data-trim><script type="text/template">
+							- Punkte Liste
+								- Unterpunkt 1
+								- Unterpunkt 2
+
+							1. Geht auch nummeriert
+							2. Mit Zahlen und so
+								1. Und auch unterpunkten
+
+
+							- [x] Checkliste abgehakt
+							- [ ] offener Punkt
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Bilder</h3>
+						<pre width="70%"><code class="bash" data-trim><script type="text/template">
+							![[name des lokalen Bildes]]
+
+							![Bild Aus den Internet](https://to.com/app/themes/thinkingobjects/img/logo.svg)
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Links</h3>
+						<pre width="70%"><code class="bash" data-trim><script type="text/template">
+							**Interne links**
+							Wikilink: [[Test Datei]]
+							Markdown: [Datei für tests](Test%20Datei.md)
+
+							** Externe links**
+							[Obsidian Help](https://help.obsidian.md)
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Tabellen</h3>
+						<pre width="70%"><code class="bash" data-trim><script type="text/template">
+							| Style | Syntax | Example | Output |
+							|-|-|-|-|
+							| Bold | `** **` or `__ __` | `**Bold text**` | **Bold text** |
+							| Italic | `* *` or `_ _`  | `*Italic text*` | *Italic text* |
+							| Strikethrough | `~~ ~~` |  `~~Striked out text~~` | ~~Striked out text~~ |
+							| Highlight | `== ==` |  `==Highlighted text==` | ==Highlighted text== |
+							| Bold and nested italic | `** **` and `_ _`  | `**Bold text and _nested italic_ text**` | **Bold text and _nested italic_ text** |
+							| Bold and italic | `*** ***` or `___ ___` |  `***Bold and italic text***` | ***Bold and italic text*** |
+						</script></code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h1>Demo</h1>
+					</section>
+
+					<section>
+						<h3>Hier gibts Hilfe</h3>
+						<a href="https://help.obsidian.md/Home">https://help.obsidian.md/Home</a>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				width: '100%',
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
